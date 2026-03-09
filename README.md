@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Italy Trip Astro Site
 
 This is an Astro version of the Italy family trip site.
@@ -24,3 +25,6 @@ The included workflow will build and deploy automatically.
 
 - `src/pages/index.astro` — homepage
 - `src/pages/cities/*.astro` — per-city pages
+=======
+# italy-trip
+>>>>>>> 58b53d8866c6ef1d3c4a99cb8ed9c3ccad5aeb3b

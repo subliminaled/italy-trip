@@ -1,0 +1,21 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { title, city, stay, hotel } = Astro.props;
+---
+<BaseLayout title={title}>
+  <section class="hero">
+    <div class="eyebrow">City page</div>
+    <h1>{city}</h1>
+    <p class="sub">{stay}{hotel ? ` · Hotel: ${hotel}` : ""}</p>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Details</h2>
+      <p>Quick notes for this stop.</p>
+    </div>
+    <div class="section-body">
+      <slot />
+      <p style="margin-top:18px;"><a href={`${Astro.base}/`} style="color: var(--accent); font-weight: 700;">← Back to main itinerary</a></p>
+    </div>
+  </section>
+</BaseLayout>

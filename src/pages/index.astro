@@ -1,0 +1,249 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Italy Family Trip – April 2026">
+  <section class="hero">
+    <div class="eyebrow">Family itinerary</div>
+    <h1>Italy Family Trip</h1>
+    <p class="sub">A simple shareable itinerary for April 2026, including flights, hotel stays, cities, and the travel sites already booked.</p>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <span class="label">Dates</span>
+        <strong>April 9–19, 2026</strong>
+      </div>
+      <div class="summary-card">
+        <span class="label">Route</span>
+        <strong>Rome → Florence → Cinque Terre → Lake Como → Milan</strong>
+      </div>
+      <div class="summary-card">
+        <span class="label">Hotels</span>
+        <strong>5 stays · 5 cities</strong>
+      </div>
+      <div class="summary-card">
+        <span class="label">Booked sites</span>
+        <strong>Vatican Museums + Villa del Balbianello</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="map">
+    <div class="section-header">
+      <h2>Route Map</h2>
+      <p>A built-in route graphic, so nothing gets blocked by embeds.</p>
+    </div>
+    <div class="section-body">
+      <svg class="route-map" viewBox="0 0 980 320" role="img" aria-label="Italy trip route map from Rome to Milan">
+        <defs>
+          <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#f8f3eb" />
+            <stop offset="100%" stop-color="#efe6d8" />
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="980" height="320" fill="url(#sea)" rx="18" />
+        <path d="M590 34 C565 70, 545 95, 535 130 C525 160, 535 195, 520 222 C506 246, 480 266, 452 284 C430 298, 422 308, 430 318 L595 318 C620 300, 635 280, 646 255 C659 226, 657 190, 669 160 C681 130, 708 110, 724 84 C740 58, 743 36, 736 18 Z" fill="#e7dccb" stroke="#cdbda7" stroke-width="3"/>
+        <path d="M472 282 C490 260, 515 238, 526 210 C540 172, 540 134, 560 100" fill="none" stroke="#9a3412" stroke-width="6" stroke-linecap="round"/>
+        <path d="M560 100 C610 85, 656 72, 707 52" fill="none" stroke="#9a3412" stroke-width="6" stroke-linecap="round"/>
+        <g fill="#9a3412" stroke="#fffdf9" stroke-width="4">
+          <circle cx="560" cy="100" r="10" />
+          <circle cx="600" cy="84" r="10" />
+          <circle cx="483" cy="250" r="10" />
+          <circle cx="555" cy="66" r="10" />
+          <circle cx="622" cy="45" r="10" />
+        </g>
+        <g font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#1f2937">
+          <text x="575" y="95">Rome</text>
+          <text x="616" y="80">Florence</text>
+          <text x="300" y="250">Cinque Terre</text>
+          <text x="506" y="58">Varenna</text>
+          <text x="638" y="40">Milan</text>
+        </g>
+        <g font-family="Inter, sans-serif" font-size="15" fill="#6b7280">
+          <text x="574" y="118">Apr 10–12</text>
+          <text x="616" y="103">Apr 12–15</text>
+          <text x="301" y="273">Apr 15–17</text>
+          <text x="505" y="81">Apr 17–18</text>
+          <text x="638" y="63">Apr 18–19</text>
+        </g>
+      </svg>
+      <p class="meta" style="margin-top:10px;">Route: Rome → Florence → Cinque Terre (Monterosso) → Varenna (Lake Como) → Milan</p>
+    </div>
+  </section>
+
+  <section class="section" id="flights">
+    <div class="section-header">
+      <h2>Air Travel</h2>
+      <p>Flight schedule currently booked.</p>
+    </div>
+    <div class="section-body">
+      <div class="travel-grid">
+        <article class="travel-card">
+          <h3>Outbound</h3>
+          <div class="flight">
+            <strong>April 9 — Delta DL0142</strong>
+            <span>Seattle (SEA) → Amsterdam (AMS)</span>
+            <span>Departs 1:45 PM on April 9</span>
+            <span>Arrives 8:40 AM on April 10</span>
+          </div>
+          <div class="flight">
+            <strong>April 10 — Delta DL9543</strong>
+            <span>Amsterdam (AMS) → Rome (FCO)</span>
+            <span>Departs 9:30 AM on April 10</span>
+            <span>Arrives 11:45 AM on April 10</span>
+          </div>
+        </article>
+
+        <article class="travel-card">
+          <h3>Return</h3>
+          <div class="flight">
+            <strong>April 19 — Delta DL8351</strong>
+            <span>Milan Malpensa (MXP) → Paris Charles de Gaulle (CDG)</span>
+            <span>Departs 9:15 AM on April 19</span>
+            <span>Arrives 10:50 AM on April 19</span>
+          </div>
+          <div class="flight">
+            <strong>April 19 — Delta DL0081</strong>
+            <span>Paris Charles de Gaulle (CDG) → Seattle (SEA)</span>
+            <span>Departs 4:00 PM on April 19</span>
+            <span>Arrives 5:38 PM on April 19</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="itinerary">
+    <div class="section-header">
+      <h2>Trip Itinerary</h2>
+      <p>Hotels, dates, and booked travel sites.</p>
+    </div>
+    <div class="timeline">
+      <article class="stop">
+        <div class="date">Apr 10–12</div>
+        <div>
+          <h3 class="city">Rome · 2 nights</h3>
+          <span class="meta"><strong>Hotel:</strong> Vatican Jubilee</span>
+          <div class="pill-row">
+            <span class="pill">Vatican Museums &amp; Sistine Chapel — Apr 11 · 9:45 AM check-in</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="stop">
+        <div class="date">Apr 12–15</div>
+        <div>
+          <h3 class="city">Florence · 3 nights</h3>
+          <span class="meta"><strong>Hotel:</strong> Hotel Collodi</span>
+        </div>
+      </article>
+
+      <article class="stop">
+        <div class="date">Apr 15–17</div>
+        <div>
+          <h3 class="city">Cinque Terre · 2 nights</h3>
+          <span class="meta"><strong>City/Town:</strong> Monterosso al Mare</span>
+          <span class="meta"><strong>Hotel:</strong> Hotel Margherita</span>
+        </div>
+      </article>
+
+      <article class="stop">
+        <div class="date">Apr 17–18</div>
+        <div>
+          <h3 class="city">Lake Como · 1 night</h3>
+          <span class="meta"><strong>City/Town:</strong> Varenna</span>
+          <span class="meta"><strong>Hotel:</strong> Albergo Milano</span>
+          <div class="pill-row">
+            <span class="pill">Villa del Balbianello — Apr 18 · Garden tickets · 10:00 AM</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="stop">
+        <div class="date">Apr 18–19</div>
+        <div>
+          <h3 class="city">Milan · 1 night</h3>
+          <span class="meta"><strong>Hotel:</strong> Room Mate Giulia</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Train Segments</h2>
+      <p>Primary rail connections between cities.</p>
+    </div>
+    <div class="section-body">
+      <div class="city-grid">
+        <article class="city-card">
+          <h3>Rome → Florence</h3>
+          <ul>
+            <li>High-speed train (Frecciarossa or Italo)</li>
+            <li>Approx travel time: 1h 30m</li>
+            <li>Depart: Roma Termini</li>
+            <li>Arrive: Firenze Santa Maria Novella</li>
+          </ul>
+        </article>
+
+        <article class="city-card">
+          <h3>Florence → Cinque Terre</h3>
+          <ul>
+            <li>Train to Monterosso al Mare</li>
+            <li>Approx travel time: 2h 30m</li>
+            <li>Connection often in Pisa or La Spezia</li>
+          </ul>
+        </article>
+
+        <article class="city-card">
+          <h3>Cinque Terre → Varenna (Lake Como)</h3>
+          <ul>
+            <li>Route via Milan</li>
+            <li>Approx travel time: 4–4.5 hours</li>
+            <li>Change trains in Milano Centrale</li>
+          </ul>
+        </article>
+
+        <article class="city-card">
+          <h3>Varenna → Milan</h3>
+          <ul>
+            <li>Direct regional train</li>
+            <li>Approx travel time: 1 hour</li>
+            <li>Depart: Varenna-Esino</li>
+            <li>Arrive: Milano Centrale</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cities">
+    <div class="section-header">
+      <h2>City Pages</h2>
+      <p>Each stop now has its own page, so the site can grow without getting cluttered.</p>
+    </div>
+    <div class="section-body">
+      <div class="page-links">
+        <a class="page-card" href={`${Astro.base}/cities/rome/`}>
+          <h3>Rome</h3>
+          <p>Hotel, Vatican reservation, and the Rome segment.</p>
+        </a>
+        <a class="page-card" href={`${Astro.base}/cities/florence/`}>
+          <h3>Florence</h3>
+          <p>Includes the Tuscany local train day-trip note.</p>
+        </a>
+        <a class="page-card" href={`${Astro.base}/cities/cinque-terre/`}>
+          <h3>Cinque Terre</h3>
+          <p>Monterosso base and short coastal stay details.</p>
+        </a>
+        <a class="page-card" href={`${Astro.base}/cities/lake-como/`}>
+          <h3>Lake Como</h3>
+          <p>Varenna stay and Villa del Balbianello reservation.</p>
+        </a>
+        <a class="page-card" href={`${Astro.base}/cities/milan/`}>
+          <h3>Milan</h3>
+          <p>Final night, Duomo area, and flight-out note.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

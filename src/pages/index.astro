@@ -8,7 +8,30 @@ import RouteMap from "../components/RouteMap.astro";
 import InteractiveMap from "../components/InteractiveMap.astro";
 ---
 <BaseLayout title="Italy Family Trip – April 2026">
-    <InteractiveMap />
+  <section class="hero">
+    <div class="eyebrow">Family itinerary</div>
+    <h1>Italy Family Trip</h1>
+    <p class="sub">A simple shareable itinerary for April 2026, including flights, hotel stays, cities, and the travel sites already booked.</p>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <span class="label">Dates</span>
+        <strong>{tripInfo.dates}</strong>
+      </div>
+      <div class="summary-card">
+        <span class="label">Route</span>
+        <strong>{tripInfo.route.join(" → ")}</strong>
+      </div>
+      <div class="summary-card">
+        <span class="label">Hotels</span>
+        <strong>{tripInfo.hotels}</strong>
+      </div>
+      <div class="summary-card">
+        <span class="label">Booked sites</span>
+        <strong>{tripInfo.bookedSites.join(" + ")}</strong>
+      </div>
+    </div>
+  </section>
+  <InteractiveMap />
   
   <section class="section" id="flights">
     <div class="section-header">

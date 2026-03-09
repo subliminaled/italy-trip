@@ -1,15 +1,21 @@
 ---
 import CityLayout from "../../layouts/CityLayout.astro";
 import { cities } from "../../data/trip.js";
+import { hotels } from "../../data/hotels.js";
+import { reservations } from "../../data/reservations.js";
 ---
-<CityLayout title="Rome – Italy Family Trip" city="Rome" stay="Apr 10–12 · 2 nights" hotel="Vatican Jubilee">
+<CityLayout
+  title={`${hotels.find(h => h.city === "Rome").city} – Italy Family Trip`}
+  city={hotels.find(h => h.city === "Rome").city}
+  stay={`${hotels.find(h => h.city === "Rome").dates} · ${hotels.find(h => h.city === "Rome").nights} night${hotels.find(h => h.city === "Rome").nights > 1 ? 's' : ''}`}
+  hotel={hotels.find(h => h.city === "Rome").name}
+>
   <div class="city-grid">
     <article class="city-card">
       <h3>Stay</h3>
       <ul>
-        <li>Arrive April 10 via Amsterdam</li>
-        <li>Hotel: Vatican Jubilee</li>
-        <li>2 nights in Rome</li>
+        <li>Hotel: {hotels.find(h => h.city === "Rome").name}</li>
+        <li>{hotels.find(h => h.city === "Rome").nights} nights in Rome</li>
       </ul>
     </article>
     <article class="city-card">
@@ -18,5 +24,16 @@ import { cities } from "../../data/trip.js";
         <li>{cities.find(c => c.name === "Rome").description}</li>
       </ul>
     </article>
+    {reservations.find(r => r.city === "Rome") && (
+      <article class="city-card">
+        <h3>Booked reservation</h3>
+        <ul>
+          <li><strong>{reservations.find(r => r.city === "Rome").name}</strong></li>
+          <li>Date: {reservations.find(r => r.city === "Rome").date}</li>
+          <li>Time: {reservations.find(r => r.city === "Rome").time}</li>
+          <li>{reservations.find(r => r.city === "Rome").description}</li>
+        </ul>
+      </article>
+    )}
   </div>
 </CityLayout>

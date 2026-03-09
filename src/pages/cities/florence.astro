@@ -1,14 +1,20 @@
 ---
 import CityLayout from "../../layouts/CityLayout.astro";
 import { cities } from "../../data/trip.js";
+import { hotels } from "../../data/hotels.js";
 ---
-<CityLayout title="Florence – Italy Family Trip" city="Florence" stay="Apr 12–15 · 3 nights" hotel="Hotel Collodi">
+<CityLayout
+  title={`${hotels.find(h => h.city === "Florence").city} – Italy Family Trip`}
+  city={hotels.find(h => h.city === "Florence").city}
+  stay={`${hotels.find(h => h.city === "Florence").dates} · ${hotels.find(h => h.city === "Florence").nights} night${hotels.find(h => h.city === "Florence").nights > 1 ? 's' : ''}`}
+  hotel={hotels.find(h => h.city === "Florence").name}
+>
   <div class="city-grid">
     <article class="city-card">
       <h3>Stay</h3>
       <ul>
-        <li>Hotel: Hotel Collodi</li>
-        <li>3 nights in Florence</li>
+        <li>Hotel: {hotels.find(h => h.city === "Florence").name}</li>
+        <li>{hotels.find(h => h.city === "Florence").nights} nights in Florence</li>
         <li>Central base for city exploration</li>
       </ul>
     </article>

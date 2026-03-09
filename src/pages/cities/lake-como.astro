@@ -1,6 +1,5 @@
----
 import CityLayout from "../../layouts/CityLayout.astro";
----
+import { cities } from "../../data/trip.js";
 <CityLayout title="Lake Como – Italy Family Trip" city="Lake Como" stay="Apr 17–18 · 1 night" hotel="Albergo Milano">
   <div class="city-grid">
     <article class="city-card">
@@ -12,11 +11,9 @@ import CityLayout from "../../layouts/CityLayout.astro";
       </ul>
     </article>
     <article class="city-card">
-      <h3>Booked reservation</h3>
+      <h3>Description</h3>
       <ul>
-        <li>Villa del Balbianello</li>
-        <li>April 18</li>
-        <li>Garden tickets · 10:00 AM</li>
+        <li>{cities.find(c => c.name === "Lake Como").description}</li>
       </ul>
     </article>
   </div>

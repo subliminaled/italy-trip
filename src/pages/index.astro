@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { tripInfo } from "../data/trip.js";
 ---
-
 <BaseLayout title="Italy Family Trip – April 2026">
   <section class="hero">
     <div class="eyebrow">Family itinerary</div>
@@ -10,19 +10,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="summary-grid">
       <div class="summary-card">
         <span class="label">Dates</span>
-        <strong>April 9–19, 2026</strong>
+        <strong>{tripInfo.dates}</strong>
       </div>
       <div class="summary-card">
         <span class="label">Route</span>
-        <strong>Rome → Florence → Cinque Terre → Lake Como → Milan</strong>
+        <strong>{tripInfo.route.join(" → ")}</strong>
       </div>
       <div class="summary-card">
         <span class="label">Hotels</span>
-        <strong>5 stays · 5 cities</strong>
+        <strong>{tripInfo.hotels}</strong>
       </div>
       <div class="summary-card">
         <span class="label">Booked sites</span>
-        <strong>Vatican Museums + Villa del Balbianello</strong>
+        <strong>{tripInfo.bookedSites.join(" + ")}</strong>
       </div>
     </div>
   </section>
@@ -223,23 +223,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
     <div class="section-body">
       <div class="page-links">
-        <a class="page-card" href={`./cities/rome/`}>
+        <a class="page-card" href="/cities/rome/">
           <h3>Rome</h3>
           <p>Hotel, Vatican reservation, and the Rome segment.</p>
         </a>
-        <a class="page-card" href={`./cities/florence/`}>
+        <a class="page-card" href="/cities/florence/">
           <h3>Florence</h3>
           <p>Includes the Tuscany local train day-trip note.</p>
         </a>
-        <a class="page-card" href={`./cinque-terre/`}>
+        <a class="page-card" href="/cities/cinque-terre/">
           <h3>Cinque Terre</h3>
           <p>Monterosso base and short coastal stay details.</p>
         </a>
-        <a class="page-card" href={`./cities/lake-como/`}>
+        <a class="page-card" href="/cities/lake-como/">
           <h3>Lake Como</h3>
           <p>Varenna stay and Villa del Balbianello reservation.</p>
         </a>
-        <a class="page-card" href={`./cities/milan/`}>
+        <a class="page-card" href="/cities/milan/">
           <h3>Milan</h3>
           <p>Final night, Duomo area, and flight-out note.</p>
         </a>

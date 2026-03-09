@@ -14,7 +14,7 @@ import { hotels } from "../../data/hotels.js";
       <h3>Stay</h3>
       <ul>
         <li>Base town: {hotels.find(h => h.city === "Cinque Terre").town}</li>
-        <li>Hotel: {hotels.find(h => h.city === "Cinque Terre").name}</li>
+        <li>Hotel: <a href={hotels.find(h => h.city === "Cinque Terre").url} target="_blank"> {hotels.find(h => h.city === "Cinque Terre").name}</a></li>
         <li>{hotels.find(h => h.city === "Cinque Terre").nights} nights</li>
       </ul>
     </article>

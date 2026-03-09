@@ -13,7 +13,7 @@ import { hotels } from "../../data/hotels.js";
     <article class="city-card">
       <h3>Stay</h3>
       <ul>
-        <li>Hotel: {hotels.find(h => h.city === "Milan").name}</li>
+        <li>Hotel: <a href={hotels.find(h => h.city === "Milan").url} target="_blank"> {hotels.find(h => h.city === "Milan").name}</a></li>
         <li>Final night of the trip</li>
         <li>Near the Duomo / fashion area</li>
       </ul>

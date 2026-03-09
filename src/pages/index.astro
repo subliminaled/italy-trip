@@ -71,7 +71,7 @@ import InteractiveMap from "../components/InteractiveMap.astro";
             <div>
               <h3 class="city">{hotel.city} · {hotel.nights} night{hotel.nights > 1 ? 's' : ''}</h3>
               {hotel.town && <span class="meta"><strong>City/Town:</strong> {hotel.town}</span>}
-              <span class="meta"><strong>Hotel:</strong> {hotel.name}</span>
+              <span class="meta"><strong>Hotel:</strong> <a href={hotel.url} target="_blank">{hotel.name}</a></span>
               {reservation && (
                 <strong>Booked Reservations:</strong><br/>
                 <div class="pill-row">

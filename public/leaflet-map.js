@@ -1,9 +1,9 @@
 const cities = [
-  { name: 'Rome', lat: 41.9028, lng: 12.4964, number: 1 },
-  { name: 'Florence', lat: 43.7696, lng: 11.2558, number: 2 },
-  { name: 'Cinque Terre', lat: 44.1468, lng: 9.6556, number: 3 },
-  { name: 'Lake Como', lat: 45.9904, lng: 9.2576, number: 4 },
-  { name: 'Milan', lat: 45.4642, lng: 9.1900, number: 5 }
+  { name: 'Rome', lat: 41.905292, lng: 12.460421, number: 1, url: "https://maps.app.goo.gl/uGTgA3n9t7jw5U6W6" },
+  { name: 'Florence', lat: 43.776713, lng: 11.255014, number: 2, url: "https://www.hotelcollodi.com" },
+  { name: 'Cinque Terre', lat: 44.148186, lng: 9.655083, number: 3, url: "https://www.hotelmonterosso.it" },
+  { name: 'Lake Como', lat: 46.011429, lng: 9.283331, number: 4, url: "https://www.albergomilanovarenna.com/it/" },
+  { name: 'Milan', lat: 45.465181, lng: 9.189457, number: 5, url: "https://room-matehotels.com/gb/hotel-giulia-milan" }
 ];
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,8 +14,12 @@ window.addEventListener('DOMContentLoaded', () => {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
   cities.forEach(city => {
+    const popupContent = city.url
+    ? `<a href="${city.url}" target="_blank">${city.name}</a>`
+    : `<b>${city.name}</b>`;
+
     window.L.marker([city.lat, city.lng], {icon: createNumberedIcon(city.number)}).addTo(map)
-      .bindPopup(`<b>${city.name}</b>`);
+      .bindPopup(popupContent);
   });
 });
 
